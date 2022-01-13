@@ -1,0 +1,255 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+<title>Adult Income</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+{% endblock %}
+
+{% block body %}
+<header class="content bg-dark text-primary"></header>
+<div class="form">
+    <form action="javascript:void(0)" id="fdata" method="post">
+        <center>
+            <table>
+                <tr>
+                    <h1 style="text-align: center" class="content text-primary">Adult Income Prediction</h1>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="number" name="age" id="age" placeholder="Age" step="any">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input placeholder="Work Class" disabled="disabled" class="content bg-light">
+                    </td>
+                    <td>
+                        <select name="workclass" id="workclass">
+                            <option value="?">N.A.</option>
+                            <option value="State-gov">State-gov</option>
+                            <option value="Self-emp-not-inc">Self-emp-not-inc</option>
+                            <option value="Private">Private</option>
+                            <option value="Federal-gov">Federal-gov</option>
+                            <option value="Local-gov">Local-gov</option>
+                            <option value="Self-emp-inc">Self-emp-inc</option>
+                            <option value="Without-pay">Without-pay</option>
+                            <option value="Never-worked">Never-worked</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="number" name="fnlwgt" id="fnlwgt" placeholder="Final Weight" step="any">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input placeholder="Education" disabled="disabled" class="content bg-light">
+                    </td>
+                    <td>
+                        <select name="education" id="education">
+                            <option value="Preschool">Preschool</option>
+                            <option value="1st-4th">1st-4th</option>
+                            <option value="5th-6th">5th-6th</option>
+                            <option value="7th-8th">7th-8th</option>
+                            <option value="9th">9th</option>
+                            <option value="10th">10th</option>
+                            <option value="11th">11th</option>
+                            <option value="12th">12th</option>
+                            <option value="HS-grad">HS-grad</option>
+                            <option value="Some-college">Some-college</option>
+                            <option value="Assoc-acdm">Assoc-acdm</option>
+                            <option value="Assoc-voc">Assoc-voc</option>
+                            <option value="Bachelors">Bachelors</option>
+                            <option value="Masters">Masters</option>
+                            <option value="Prof-school">Prof-school</option>
+                            <option value="Doctorate">Doctorate</option>                
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input placeholder="Education Number" disabled="disabled" class="content bg-light">
+                    </td>
+                    <td>
+                        <select name="education_num" id="education_num">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="12">12</option>
+                            <option value="11">11</option>
+                            <option value="13">13</option>
+                            <option value="14">14</option>
+                            <option value="15">15</option>
+                            <option value="16">16</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input placeholder="Marital Status" disabled="disabled" class="content bg-light">
+                    </td>
+                    <td>
+                        <select name="marital_status" id="marital_status">
+                            <option value="Married-civ-spouse">Married-civ-spouse</option>
+                            <option value="Divorced">Divorced</option>
+                            <option value="Never-married">Never-married</option>
+                            <option value="Separated">Separated</option>
+                            <option value="Widowed">Widowed</option>
+                            <option value="Married-spouse-absent">Married-spouse-absent</option>
+                            <option value="Married-AF-spouse">Married-AF-spouse</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input placeholder="Occupation" disabled="disabled" class="content bg-light">
+                    </td>
+                    <td>
+                        <select name="occupation" id="occupation">
+                            <option value="?">N.A.</option>
+                            <option value="Adm-clerical">Adm-clerical</option>
+                            <option value="Exec-managerial">Exec-managerial</option>
+                            <option value="Handlers-cleaners">Handlers-cleaners</option>
+                            <option value="Prof-specialty">Prof-specialty</option>
+                            <option value="Other-service">Other-service</option>
+                            <option value="Sales">Sales</option>
+                            <option value="Craft-repair">Craft-repair</option>
+                            <option value="Transport-moving">Transport-moving</option>
+                            <option value="Farming-fishing">Farming-fishing</option>
+                            <option value="Machine-op-inspct">Machine-op-inspct</option>
+                            <option value="Tech-support">Tech-support</option>
+                            <option value="Protective-serv">Protective-serv</option>
+                            <option value="Armed-Forces">Armed-Forces</option>
+                            <option value="Priv-house-serv">Priv-house-serv</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input placeholder="Relationship" disabled="disabled" class="content bg-light">
+                    </td>
+                    <td>
+                        <select name="relationship" id="relationship">
+                            <option value="Not-in-family">Not-in-family</option>
+                            <option value="Husband">Husband</option>
+                            <option value="Wife">Wife</option>
+                            <option value="Own-child">Own-child</option>
+                            <option value="Unmarried">Unmarried</option>
+                            <option value="Other-relative">Other-relative</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input placeholder="Race" disabled="disabled" class="content bg-light">
+                    </td>
+                    <td>
+                        <select name="race" id="race">
+                            <option value="White">White</option>
+                            <option value="Black">Black</option>
+                            <option value="Asian-Pac-Islander">Asian-Pac-Islander</option>
+                            <option value="Amer-Indian-Eskimo">Amer-Indian-Eskimo</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input placeholder="Sex" disabled="disabled" class="content bg-light">
+                    </td>
+                    <td>
+                        <select name="sex" id="sex">
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="number" name="capital_gain" id="capital_gain" placeholder="Capital Gain" step="any">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="number" name="capital_loss" id="capital_loss" placeholder="Capital Loss" step="any">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="number" name="hours_per_week" id="hours_per_week" placeholder="Hours Per Week" step="any">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input placeholder="Native Country" disabled="disabled" class="content bg-light">
+                    </td>
+                    <td>
+                        <select name="native_country" id="native_country">
+                            <option value="?">N.A.</option>
+                            <option value="United-States">United-States</option>
+                            <option value="Cuba">Cuba</option>
+                            <option value="Jamaica">Jamaica</option>
+                            <option value="India">India</option>
+                            <option value="Mexico">Mexico</option>
+                            <option value="South">South</option>
+                            <option value="Puerto-Rico">Puerto-Rico</option>
+                            <option value="Honduras">Honduras</option>
+                            <option value="England">England</option>
+                            <option value="Canada">Canada</option>
+                            <option value="Germany">Germany</option>
+                            <option value="Iran">Iran</option>
+                            <option value="Philippines">Philippines</option>
+                            <option value="Italy">Italy</option>
+                            <option value="Poland">Poland</option>
+                            <option value="Columbia">Columbia</option>
+                            <option value="Cambodia">Cambodia</option>
+                            <option value="Thailand">Thailand</option>
+                            <option value="Ecuador">Ecuador</option>
+                            <option value="Laos">Laos</option>
+                            <option value="Taiwan">Taiwan</option>
+                            <option value="Haiti">Haiti</option>
+                            <option value="Portugal">Portugal</option>
+                            <option value="Dominican-Republic">Dominican-Republic</option>
+                            <option value="El-Salvador">El-Salvador</option>
+                            <option value="France">France</option>
+                            <option value="Guatemala">Guatemala</option>
+                            <option value="China">China</option>
+                            <option value="Japan">Japan</option>
+                            <option value="Yugoslavia">Yugoslavia</option>
+                            <option value="Peru">Peru</option>
+                            <option value="Outlying-US(Guam-USVI-etc)">Outlying-US(Guam-USVI-etc)</option>
+                            <option value="Scotland">Scotland</option>
+                            <option value="Trinadad&Tobago">Trinadad&Tobago</option>
+                            <option value="Greece">Greece</option>
+                            <option value="Nicaragua">Nicaragua</option>
+                            <option value="Vietnam">Vietnam</option>
+                            <option value="Hong">Hong</option>
+                            <option value="Ireland">Ireland</option>
+                            <option value="Hungary">Hungary</option>
+                            <option value="Holand-Netherlands">Holand-Netherlands</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr><td></td></tr>
+                <tr>
+                    <td></td>
+                    <td align="center">
+                        <input type="submit" value="Predict" class="button" style="background-color: green; "onclick="requiredCheck()">
+                        <input type="submit" value="Clear" class="button" style="background-color: red; "onclick="clear()">
+                    </td>
+                </tr>
+            </table>
+        </center>
+    </form>
+</div>
+<script src="{{ url_for('static', filename='js/adult_income.js') }}"></script>
+{% endblock %}

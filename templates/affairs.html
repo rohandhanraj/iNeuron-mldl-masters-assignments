@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+<title>Affairs</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+{% endblock %}
+
+{% block body %}
+<header class="content bg-dark text-primary"></header>
+<div class="form">
+    <form action="javascript:void(0)" id="fdata" method="post">
+        <center>
+            <table>
+                <tr>
+                    <h1 style="text-align: center" class="content text-primary">Women's Affairs Prediction</h1>
+                </tr>
+                <tr>
+                    <td><input type="number" name="rate_marriage" id="rate_marriage" placeholder="Marriage Rating" step="any"></td>
+                    <td><input type="number" name="age" id="age" placeholder="Age" step="any"></td>
+                </tr>
+                <tr>
+                    <td><input type="number" name="yrs_married" id="yrs_married" placeholder="Years after Marriage" step="any"></td>
+                    <td><input type="number" name="children" id="children" placeholder="Number of Children" step="any"></td>
+                </tr>
+                <tr>
+                    <td><input type="number" name="religious" id="religious" placeholder="Religious Feeling" step="any"></td>
+                    <td><input type="number" name="educ" id="educ" placeholder="Education Level" step="any"></td>
+                </tr>
+                <tr>
+                    <td><input type="number" name="occupation" id="occupation" placeholder="Occupation" step="any"></td>
+                    <td><input type="number" name="occupation_husb" id="occupation_husb" placeholder="Husband's Occupation" step="any"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td align="center">
+                        <input type="submit" value="Classify Affairs" class="button" style="background-color: green;" onclick="requiredCheck()">
+                        <input type="submit" value="Clear" class="button" style="background-color: red;" onclick="clear()">
+                    </td>
+                </tr>
+            </table>
+        </center>
+    </form>
+</div>
+<script src="{{ url_for('static', filename='js/affairs.js') }}"></script>
+{% endblock %}

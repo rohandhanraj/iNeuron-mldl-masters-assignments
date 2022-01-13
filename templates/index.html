@@ -1,0 +1,1318 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+<title>Home</title>
+{% endblock %}
+
+{% block body %}
+<!-- Masthead-->
+<header class="masthead">
+    <div class="container">
+        <div class="masthead-subheading">Assignments</div>
+        <div class="masthead-heading text-uppercase">Machine Learning and Deep Learning Masters</div>
+        <a class="btn btn-primary btn-xl text-uppercase" href="#projects">Projects</a>
+    </div>
+</header>
+<!-- Services-->
+<section class="page-section" style="background-color:rgba(255, 80, 255, 0.63)" id="techs">
+    <div class="container">
+        <div class="text-center">
+            <h2 class="section-heading text-uppercase">Technologies</h2>
+            <h3 class="section-subheading text-muted">The Base of any Application.</h3>
+        </div>
+        <div class="row text-center">
+            <div class="col-md-4">
+                <span class="timeline-image">
+                    <img class="rounded-circle img-fluid"
+                        src="{{ url_for('static', filename='images/services/python.png') }}" alt="..." />
+                </span>
+                <h4 class="my-3">Python</h4>
+                <p class="text-muted">Python Is the most popular language for AI as it is easy to learn and implement.
+                    With its many libraries, they can also be used for data analysis.</p>
+            </div>
+            <div class="col-md-4">
+                <span class="timeline-image">
+                    <img class="rounded-circle img-fluid"
+                        src="{{ url_for('static', filename='images/services/ml.png') }}" alt="..." />
+                </span>
+                <h4 class="my-3">Machine Learning</h4>
+                <p class="text-muted">Machine learning (ML) is making the computer learn by drawing insights from data
+                    without being explicitly programmed to do so.</p>
+            </div>
+            <div class="col-md-4">
+                <span class="timeline-image">
+                    <img class="rounded-circle img-fluid"
+                        src="{{ url_for('static', filename='images/services/ai.png') }}" alt="..." />
+                </span>
+                <h4 class="my-3">Artificial Intelligence</h4>
+                <p class="text-muted">Artificial intelligence (AI) is the ability of a computer or a robot controlled by
+                    a computer to do tasks that are usually done by humans because they require human intelligence and
+                    discernment.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Portfolio Grid-->
+<section class="page-section bg-primary" id="projects">
+    <div class="container">
+        <div class="text-center">
+            <h2 class="section-heading text-uppercase">Projects</h2>
+            <h3 class="section-subheading text-muted">Application of acquired knowledge.</h3>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-sm-6 mb-4">
+                <!-- Project 1-->
+                <div class="portfolio-item">
+                    <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                        </div>
+                        <img class="img-fluid" src="{{ url_for('static', filename='images/portfolio/1.png') }}"
+                            alt="..." />
+                    </a>
+                    <div class="portfolio-caption">
+                        <div class="portfolio-caption-heading">Boston House Price Prediction</div>
+                        <div class="portfolio-caption-subheading text-muted">Linear Regression</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6 mb-4">
+                <!-- Project 2-->
+                <div class="portfolio-item">
+                    <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal2">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                        </div>
+                        <img class="img-fluid" src="{{ url_for('static', filename='images/portfolio/2.png') }}"
+                            alt="..." />
+                    </a>
+                    <div class="portfolio-caption">
+                        <div class="portfolio-caption-heading">Women's Affairs Prediction</div>
+                        <div class="portfolio-caption-subheading text-muted">Logistic Regression</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6 mb-4">
+                <!-- Project 3-->
+                <div class="portfolio-item">
+                    <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal3">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                        </div>
+                        <img class="img-fluid" src="{{ url_for('static', filename='images/portfolio/3.png') }}"
+                            alt="..." />
+                    </a>
+                    <div class="portfolio-caption">
+                        <div class="portfolio-caption-heading">Titanic Survival Prediction</div>
+                        <div class="portfolio-caption-subheading text-muted">Decision Tree Classification</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
+                <!-- Project 4-->
+                <div class="portfolio-item">
+                    <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal4">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                        </div>
+                        <img class="img-fluid" src="{{ url_for('static', filename='images/portfolio/1.png') }}"
+                            alt="..." />
+                    </a>
+                    <div class="portfolio-caption">
+                        <div class="portfolio-caption-heading">Boston House Price Prediction</div>
+                        <div class="portfolio-caption-subheading text-muted">Random Forest Regression</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6 mb-4 mb-sm-0">
+                <!-- Project 5-->
+                <div class="portfolio-item">
+                    <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal5">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                        </div>
+                        <img class="img-fluid" src="{{ url_for('static', filename='images/portfolio/5.png') }}"
+                            alt="..." />
+                    </a>
+                    <div class="portfolio-caption">
+                        <div class="portfolio-caption-heading">Adult Census Income Prediction</div>
+                        <div class="portfolio-caption-subheading text-muted">XG Boost Classification</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <!-- Project 6-->
+                <!-- <div class="portfolio-item">
+                    <a href="hl.html">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                        </div>
+                        <img class="img-fluid" src="{{ url_for('static', filename='images/portfolio/6.jpg') }}"
+                            alt="..." />
+                    </a>
+                    <div class="portfolio-caption">
+                        <div class="portfolio-caption-heading">Window</div>
+                        <div class="portfolio-caption-subheading text-muted">Photography</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6 mb-4"> -->
+                <!-- Project 7-->
+                <!-- <div class="portfolio-item">
+                    <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                        </div>
+                        <img class="img-fluid" src="{{ url_for('static', filename='images/portfolio/4.jpg') }}"
+                            alt="..." />
+                    </a>
+                    <div class="portfolio-caption">
+                        <div class="portfolio-caption-heading">Threads</div>
+                        <div class="portfolio-caption-subheading text-muted">Illustration</div>
+                    </div>
+                </div>
+            </div> -->
+            <!-- <div class="col-lg-4 col-sm-6 mb-4"> -->
+            <!-- Project 8-->
+            <!-- <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal2">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="{{ url_for('static', filename='images/portfolio/6.jpg') }}" alt="..." />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Explore</div>
+                                <div class="portfolio-caption-subheading text-muted">Graphic Design</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4"> -->
+            <!-- Project 9-->
+            <!-- <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal3">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="{{ url_for('static', filename='images/portfolio/4.jpg') }}" alt="..." />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Finish</div>
+                                <div class="portfolio-caption-subheading text-muted">Identity</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+</section>
+<!-- About-->
+<section class="page-section" style="background-color:rgba(255, 80, 255, 0.63)" id="workflows">
+    <div class="container">
+        <div class="text-center">
+            <h2 class="section-heading text-uppercase">Assignments</h2>
+            <h3 class="section-subheading text-muted">Application for the learning management system.</h3>
+        </div>
+        <ul class="timeline">
+            <li>
+                <div class="timeline-image"><a href="{{ url_for('static', filename='notebooks/00.html') }}"><img class="rounded-circle img-fluid"
+                            src="{{ url_for('static', filename='images/about/python.png') }}" alt="..." /></a></div>
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4>April 2021</h4>
+                        <h4 class="subheading">Python Basics</h4>
+                    </div>
+                    <div class="timeline-body">
+                        <p class="text-muted">
+                            <ol type="1" style="text-align: left">
+                                <li>Loops and Conditional Statement</li>
+                                <li>String operations</li>
+                                <li>Arithematic Operators</li>
+                            </ol>
+                        </p>
+                    </div>
+                </div>
+            </li>
+            <li class="timeline-inverted">
+                <div class="timeline-image"><a href="{{ url_for('static', filename='notebooks/01.html') }}"><img class="rounded-circle img-fluid"
+                        src="{{ url_for('static', filename='images/about/python.png') }}" alt="..." /></a></div>
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4>April 2021</h4>
+                        <h4 class="subheading">Python Assignment 1</h4>
+                    </div>
+                    <div class="timeline-body">
+                        <p class="text-muted">
+                            <ol type="1" style="text-align: left">
+                                <li>Loops and Conditional Statement</li>
+                                <li>String operations</li>
+                                <li>Arithematic Operators</li>
+                            </ol>
+                        </p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="timeline-image"><a href="{{ url_for('static', filename='notebooks/02.html') }}"><img class="rounded-circle img-fluid"
+                        src="{{ url_for('static', filename='images/about/python.png') }}" alt="..." /></a></div>
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4>May 2021</h4>
+                        <h4 class="subheading">Python Assignment 2</h4>
+                    </div>
+                    <div class="timeline-body">
+                        <p class="text-muted">
+                            <ol type="1" style="text-align: left">
+                                <li>Nested Loops and Patterns</li>
+                                <li>String manipulaions</li>
+                            </ol>
+                        </p>
+                    </div>
+                </div>
+            </li>
+            <li class="timeline-inverted">
+                <div class="timeline-image"><a href="{{ url_for('static', filename='notebooks/03.html') }}"><img class="rounded-circle img-fluid"
+                        src="{{ url_for('static', filename='images/about/python.png') }}" alt="..." /></a></div>
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4>May 2021</h4>
+                        <h4 class="subheading">Python Assignment 3</h4>
+                    </div>
+                    <div class="timeline-body">
+                        <p class="text-muted">
+                            <ol type="1" style="text-align: left">
+                                <li>List Comprehensions</li>
+                                <li>Reduce</li>
+                            </ol>
+                        </p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="timeline-image"><a href="{{ url_for('static', filename='notebooks/04.html') }}"><img class="rounded-circle img-fluid"
+                        src="{{ url_for('static', filename='images/about/python.png') }}" alt="..." /></a></div>
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4>June 2021</h4>
+                        <h4 class="subheading">Python Assignment 4</h4>
+                    </div>
+                    <div class="timeline-body">
+                        <p class="text-muted">
+                            <ol type="1" style="text-align: left">
+                                <li>Object Oriented Programming</li>
+                                <li>Lambda, Map, Filter</li>
+                            </ol>
+                        </p>
+                    </div>
+                </div>
+            </li>
+            <li class="timeline-inverted">
+                <div class="timeline-image"><a href="{{ url_for('static', filename='notebooks/05.html') }}"><img class="rounded-circle img-fluid"
+                        src="{{ url_for('static', filename='images/about/python.png') }}" alt="..." /></a></div>
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4>July 2021</h4>
+                        <h4 class="subheading">Python Assignment 5</h4>
+                    </div>
+                    <div class="timeline-body">
+                        <p class="text-muted">
+                            <ol type="1" style="text-align: left">
+                                <li>Exception Handling</li>
+                            </ol>
+                        </p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="timeline-image"><a href="{{ url_for('static', filename='notebooks/06.html') }}"><img class="rounded-circle img-fluid"
+                        src="{{ url_for('static', filename='images/about/data.png') }}" alt="..." /></a></div>
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4>August 2021</h4>
+                        <h4 class="subheading">Pandas</h4>
+                    </div>
+                    <div class="timeline-body">
+                        <p class="text-muted">
+                            <ol type="1" style="text-align: left">
+                                <li>Data Cleaning</li>
+                            </ol>
+                        </p>
+                    </div>
+                </div>
+            </li>
+            <li class="timeline-inverted">
+                <div class="timeline-image"><a href="{{ url_for('static', filename='notebooks/07.html') }}"><img class="rounded-circle img-fluid"
+                        src="{{ url_for('static', filename='images/about/data.png') }}" alt="..." /></a></div>
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4>August 2021</h4>
+                        <h4 class="subheading">Numpy</h4>
+                    </div>
+                    <div class="timeline-body">
+                        <p class="text-muted">
+                            <ol type="1" style="text-align: left">
+                                <li>Vandermonde Matrix</li>
+                                <li>Moving Average</li>
+                            </ol></p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="timeline-image"><a href="{{ url_for('static', filename='notebooks/08.html') }}"><img class="rounded-circle img-fluid"
+                        src="{{ url_for('static', filename='images/about/data.png') }}" alt="..." /></a></div>
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4>August 2021</h4>
+                        <h4 class="subheading">Data Visualisation</h4>
+                    </div>
+                    <div class="timeline-body">
+                        <p class="text-muted">
+                            <ol type="1" style="text-align: left">
+                                <li>Principal Component Analysis</li>
+                                <li>Matplotlib</li>
+                            </ol>
+                        </p>
+                    </div>
+                </div>
+            </li>
+            <li class="timeline-inverted">
+                <div class="timeline-image"><a href="{{ url_for('static', filename='notebooks/09.html') }}"><img class="rounded-circle img-fluid"
+                        src="{{ url_for('static', filename='images/about/data.png') }}" alt="..." /></a></div>
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4>August 2021</h4>
+                        <h4 class="subheading">Matplotlib</h4>
+                    </div>
+                    <div class="timeline-body">
+                        <p class="text-muted">
+                            <ol type="1" style="text-align: left">
+                                <li>Curve Fitting</li>
+                                <li>Statistical Charts/Plots</li>
+                            </ol>
+                        </p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="timeline-image"><a href="{{ url_for('static', filename='notebooks/10.html') }}"><img class="rounded-circle img-fluid"
+                        src="{{ url_for('static', filename='images/about/stats.png') }}" alt="..." /></a></div>
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4>September 2021</h4>
+                        <h4 class="subheading">Statistics Assignment 1</h4>
+                    </div>
+                    <div class="timeline-body">
+                        <p class="text-muted">
+                            <ol type="1" style="text-align: left">
+                                <li>Central Tendency</li>
+                                <li>Probability Distribution Function</li>
+                                <li>Binomial Distribution</li>
+                                <li>Cummulative Distribution Function</li>
+                                <li>p-value and z-score</li>
+                            </ol>
+                        </p>
+                    </div>
+                </div>
+            </li>
+            <li class="timeline-inverted">
+                <div class="timeline-image"><a href="{{ url_for('static', filename='notebooks/11.html') }}"><img class="rounded-circle img-fluid"
+                        src="{{ url_for('static', filename='images/about/stats.png') }}" alt="..." /></a></div>
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4>September 2021</h4>
+                        <h4 class="subheading">Statistics Assignment 2</h4>
+                    </div>
+                    <div class="timeline-body">
+                        <p class="text-muted">
+                            <ol type="1" style="text-align: left">
+                                <li>Hypothesis Testing</li>
+                                <li>Z-test</li>
+                                <li>T-test</li>
+                                <li>Chi-squared test</li>
+                            </ol>
+                        </p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="timeline-image"><a href="{{ url_for('static', filename='notebooks/12.html') }}"><img class="rounded-circle img-fluid"
+                        src="{{ url_for('static', filename='images/about/stats.png') }}" alt="..." /></a></div>
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4>September 2021</h4>
+                        <h4 class="subheading">Statistics Assignment 3</h4>
+                    </div>
+                    <div class="timeline-body">
+                        <p class="text-muted">
+                            <ol type="1" style="text-align: left">
+                                <li>Hypothesis Testing</li>
+                                <li>Z-test</li>
+                            </ol>
+                        </p>
+                    </div>
+                </div>
+            </li>
+            <li class="timeline-inverted">
+                <div class="timeline-image"><a href="{{ url_for('static', filename='notebooks/13.html') }}"><img class="rounded-circle img-fluid"
+                        src="{{ url_for('static', filename='images/about/stats.png') }}" alt="..." /></a></div>
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4>September 2021</h4>
+                        <h4 class="subheading">Statistics Assignment 4</h4>
+                    </div>
+                    <div class="timeline-body">
+                        <p class="text-muted">
+                            <ol type="1" style="text-align: left">
+                                <li>Chi-squared test</li>
+                                <li>F-test</li>
+                            </ol>
+                        </p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="timeline-image"><a href="{{ url_for('static', filename='notebooks/14.html') }}"><img class="rounded-circle img-fluid"
+                        src="{{ url_for('static', filename='images/about/linear_regression.png') }}" alt="..." /></a></div>
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4>Octoberber 2021</h4>
+                        <h4 class="subheading">Linear Regression</h4>
+                    </div>
+                    <div class="timeline-body">
+                        <p class="text-muted">
+                            <ol type="1" style="text-align: left">
+                                <li>Boston House Price Prediction</li>
+                                <li>Exploratory Data Analysis</li>
+                                <li>Data Cleaning</li>
+                                <li>Data Preprocessing</li>
+                                <li>Model Building</li>
+                            </ol>
+                        </p>
+                    </div>
+                </div>
+            </li>
+            <li class="timeline-inverted">
+                <div class="timeline-image"><a href="{{ url_for('static', filename='notebooks/15.html') }}"><img class="rounded-circle img-fluid"
+                        src="{{ url_for('static', filename='images/about/logistic-regression.png') }}" alt="..." /></a>
+                </div>
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4>Octoberber 2021</h4>
+                        <h4 class="subheading">Logistic Regression</h4>
+                    </div>
+                    <div class="timeline-body">
+                        <p class="text-muted">
+                            <ol type="1" style="text-align: left">
+                                <li>Women's Affairs Prediction</li>
+                                <li>Exploratory Data Analysis</li>
+                                <li>Data Cleaning</li>
+                                <li>Data Preprocessing</li>
+                                <li>Hyper Parameters Tuning</li>
+                                <li>Model Building</li>
+                            </ol>
+                        </p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="timeline-image"><a href="{{ url_for('static', filename='notebooks/16.html') }}"><img class="rounded-circle img-fluid"
+                        src="{{ url_for('static', filename='images/about/decision-tree.png') }}" alt="..." /></a></div>
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4>Octoberber 2021</h4>
+                        <h4 class="subheading">Decision Tree Classification</h4>
+                    </div>
+                    <div class="timeline-body">
+                        <p class="text-muted">
+                            <ol type="1" style="text-align: left">
+                                <li>Titanic Survival Prediction</li>
+                                <li>Exploratory Data Analysis</li>
+                                <li>Data Cleaning</li>
+                                <li>Data Preprocessing</li>
+                                <li>Hyper Parameters Tuning</li>
+                                <li>Model Building</li>
+                            </ol>
+                        </p>
+                    </div>
+                </div>
+            </li>
+            <li class="timeline-inverted">
+                <div class="timeline-image"><a href="{{ url_for('static', filename='notebooks/17.html') }}"><img class="rounded-circle img-fluid"
+                        src="{{ url_for('static', filename='images/about/random-forest.png') }}" alt="..." /></a></div>
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4>Octoberber 2021</h4>
+                        <h4 class="subheading">Random Forest Regression</h4>
+                    </div>
+                    <div class="timeline-body">
+                        <p class="text-muted">
+                            <ol type="1" style="text-align: left">
+                                <li>Boston House Price Prediction</li>
+                                <li>Exploratory Data Analysis</li>
+                                <li>Data Cleaning</li>
+                                <li>Data Preprocessing</li>
+                                <li>Hyper Parameters Tuning</li>
+                                <li>Model Building</li>
+                            </ol>
+                        </p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="timeline-image"><a href="{{ url_for('static', filename='notebooks/18.html') }}"><img class="rounded-circle img-fluid"
+                    src="{{ url_for('static', filename='images/about/xgboost.png') }}" alt="..."/></a></div>
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4>Octoberber 2021</h4>
+                        <h4 class="subheading">XG Boost Classification</h4>
+                    </div>
+                    <div class="timeline-body">
+                        <p class="text-muted">
+                            <ol type="1" style="text-align: left">
+                                <li>Adult Income Prediction</li>
+                                <li>Exploratory Data Analysis</li>
+                                <li>Data Cleaning</li>
+                                <li>Data Preprocessing</li>
+                                <li>Hyper Parameters Tuning</li>
+                                <li>Model Building</li>
+                            </ol>
+                        </p>
+                    </div>
+                </div>
+            </li>
+            <!-- <li class="timeline-inverted">
+                <div class="timeline-image"><img class="rounded-circle img-fluid"
+                        src="{{ url_for('static', filename='images/about/clustering.png') }}" alt="..." /></div>
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4>July 2020</h4>
+                        <h4 class="subheading">Phase Two Expansion</h4>
+                    </div>
+                    <div class="timeline-body">
+                        <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut
+                            voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero
+                            unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="timeline-image"><img class="rounded-circle img-fluid"
+                        src="{{ url_for('static', filename='images/about/python.png') }}" alt="..." /></div>
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4>December 2015</h4>
+                        <h4 class="subheading">Transition to Full Service</h4>
+                    </div>
+                    <div class="timeline-body">
+                        <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut
+                            voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero
+                            unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+                    </div>
+                </div>
+            </li>
+            <li class="timeline-inverted">
+                <div class="timeline-image"><img class="rounded-circle img-fluid"
+                        src="{{ url_for('static', filename='images/about/python.png') }}" alt="..." /></div>
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4>July 2020</h4>
+                        <h4 class="subheading">Phase Two Expansion</h4>
+                    </div>
+                    <div class="timeline-body">
+                        <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut
+                            voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero
+                            unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="timeline-image"><img class="rounded-circle img-fluid"
+                        src="{{ url_for('static', filename='images/about/python.png') }}" alt="..." /></div>
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4>2009-2011</h4>
+                        <h4 class="subheading">Our Humble Beginnings</h4>
+                    </div>
+                    <div class="timeline-body">
+                        <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut
+                            voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero
+                            unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+                    </div>
+                </div>
+            </li>
+            <li class="timeline-inverted">
+                <div class="timeline-image"><img class="rounded-circle img-fluid"
+                        src="{{ url_for('static', filename='images/about/python.png') }}" alt="..." /></div>
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4>March 2011</h4>
+                        <h4 class="subheading">An Agency is Born</h4>
+                    </div>
+                    <div class="timeline-body">
+                        <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut
+                            voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero
+                            unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+                    </div>
+                </div>
+            </li> -->
+            <li class="timeline-inverted">
+                <div class="timeline-image">
+                    <h4>
+                        Be Part
+                        <br />
+                        Of Our
+                        <br />
+                        Story!
+                    </h4>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+<!-- Team-->
+<section class="page-section bg-primary" id="team">
+    <div class="container">
+        <div class="text-center">
+            <h2 class="section-heading text-uppercase">About Us</h2>
+            <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+        </div>
+        <!-- <div class="row">
+                    <div class="col-lg-4"> -->
+        <div class="team-member">
+            <img class="mx-auto rounded-circle" src="{{ url_for('static', filename='images/team/1.jpg') }}" alt="..." />
+            <h4>Rohan Dhanraj Yadav</h4>
+            <p class="text-muted">Data Science Intern</p>
+            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-kaggle"></i></a>
+            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-github"></i></a>
+            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-linkedin-in"></i></a>
+            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-telegram"></i></a>
+        </div>
+        <!-- </div>
+                </div> -->
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <p class="large text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque,
+                    laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Clients-->
+<!-- <div class="py-5">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-3 col-sm-6 my-3">
+                        <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="assets/img/logos/microsoft.svg" alt="..." /></a>
+                    </div>
+                    <div class="col-md-3 col-sm-6 my-3">
+                        <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="assets/img/logos/google.svg" alt="..." /></a>
+                    </div>
+                    <div class="col-md-3 col-sm-6 my-3">
+                        <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="assets/img/logos/facebook.svg" alt="..." /></a>
+                    </div>
+                    <div class="col-md-3 col-sm-6 my-3">
+                        <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="assets/img/logos/ibm.svg" alt="..." /></a>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+<!-- Contact-->
+<!-- <section class="page-section" id="contact">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">Contact Us</h2>
+                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                </div> -->
+<!-- * * * * * * * * * * * * * * *-->
+<!-- * * SB Forms Contact Form * *-->
+<!-- * * * * * * * * * * * * * * *-->
+<!-- This form is pre-integrated with SB Forms.-->
+<!-- To make this form functional, sign up at-->
+<!-- https://startbootstrap.com/solution/contact-forms-->
+<!-- to get an API token!-->
+<!-- <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+                    <div class="row align-items-stretch mb-5">
+                        <div class="col-md-6">
+                            <div class="form-group"> -->
+<!-- Name input-->
+<!-- <input class="form-control" id="name" type="text" placeholder="Your Name *" data-sb-validations="required" />
+                                <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
+                            </div>
+                            <div class="form-group"> -->
+<!-- Email address input-->
+<!-- <input class="form-control" id="email" type="email" placeholder="Your Email *" data-sb-validations="required,email" />
+                                <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
+                                <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
+                            </div>
+                            <div class="form-group mb-md-0"> -->
+<!-- Phone number input-->
+<!-- <input class="form-control" id="phone" type="tel" placeholder="Your Phone *" data-sb-validations="required" />
+                                <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group form-group-textarea mb-md-0"> -->
+<!-- Message input-->
+<!-- <textarea class="form-control" id="message" placeholder="Your Message *" data-sb-validations="required"></textarea>
+                                <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
+                            </div>
+                        </div>
+                    </div> -->
+<!-- Submit success message-->
+<!---->
+<!-- This is what your users will see when the form-->
+<!-- has successfully submitted-->
+<!-- <div class="d-none" id="submitSuccessMessage">
+                        <div class="text-center text-white mb-3">
+                            <div class="fw-bolder">Form submission successful!</div>
+                            To activate this form, sign up at
+                            <br />
+                            <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
+                        </div>
+                    </div> -->
+<!-- Submit error message-->
+<!---->
+<!-- This is what your users will see when there is-->
+<!-- an error submitting the form-->
+<!-- <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div> -->
+<!-- Submit Button-->
+<!-- <div class="text-center"><button class="btn btn-primary btn-xl text-uppercase disabled" id="submitButton" type="submit">Send Message</button></div>
+                </form>
+            </div>
+        </section> -->
+
+<!-- Portfolio Modals-->
+<!-- Project 1 modal popup-->
+<div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="close-modal" data-bs-dismiss="modal"><img src="{{ url_for('static', filename='images/img/close-icon.svg') }}" alt="Close modal" />
+            </div>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="modal-body">
+                            <!-- Project details-->
+                            <h2 class="text-uppercase">Boston House Price Prediction</h2>
+                            <p class="item-intro text-muted">Boston Housing Data was taken from the StatLib library and is maintained by Carnegie Mellon University.</p>
+                            <img class="img-fluid d-block mx-auto" src="{{ url_for('static', filename='images/portfolio/1.png') }}" alt="..." />
+                            <p style="text-align: left">The dataset used in this project comes from the UCI Machine Learning Repository. This data was collected in 1978 and each of the 506 entries represents aggregate information about 14 features of homes from various suburbs located in Boston.<br><br>
+
+                                The features can be summarized as follows:
+                                <ol type="1" style="text-align: left">
+                                    <li><b>CRIM</b>: This is the per capita crime rate by town.</li>
+                                    <li><b>ZN</b>: This is the proportion of residential land zoned for lots larger than 25,000 sq.ft.</li>
+                                    <li><b>INDUS</b>: This is the proportion of non-retail business acres per town.</li>
+                                    <li><b>CHAS</b>: This is the Charles River dummy variable (this is equal to 1 if tract bounds river; 0 otherwise).</li>
+                                    <li><b>NOX</b>: This is the nitric oxides concentration (parts per 10 million).</li>
+                                    <li><b>RM</b>: This is the average number of rooms per dwelling.</li>
+                                    <li><b>AGE</b>: This is the proportion of owner-occupied units built prior to 1940.</li>
+                                    <li><b>DIS</b>: This is the weighted distances to five Boston employment centers.</li>
+                                    <li><b>RAD</b>: This is the index of accessibility to radial highways.</li>
+                                    <li><b>TAX</b>: This is the full-value property-tax rate per $10,000.</li>
+                                    <li><b>PTRATIO</b>: This is the pupil-teacher ratio by town.</li>
+                                    <li><b>B</b>: This is calculated as 1000(Bk — 0.63)², where Bk is the proportion of people of African American descent by town.</li>
+                                    <li><b>LSTAT</b>: This is the percentage lower status of the population.</li>
+                                    <li><b>MEDV</b>: This is the median value of owner-occupied homes in $1000s.</li>
+                                </ol>
+                            </p>
+                            <ul class="list-inline">
+                                <li>
+                                    <strong>ML Algorithm:</strong>
+                                    Linear Regression
+                                </li>
+                                <li>
+                                    <strong>Category:</strong>
+                                    Regression(Supervised)
+                                </li>
+                            </ul>
+                            <a href="/linearRegression" class="btn btn-primary btn-xl text-uppercase" role="button">
+                                View Project
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Project 2 modal popup-->
+<div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="close-modal" data-bs-dismiss="modal"><img src="{{ url_for('static', filename='images/img/close-icon.svg') }}" alt="Close modal" />
+            </div>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="modal-body">
+                            <!-- Project details-->
+                            <h2 class="text-uppercase">Women's Affairs Prediction</h2>
+                            <p class="item-intro text-muted">Extramarital affair data used to explain the allocation of an individual’s time among work, time spent with a spouse, and time spent with a paramour.</p>
+                            <img class="img-fluid d-block mx-auto" src="{{ url_for('static', filename='images/portfolio/2.png') }}" alt="..." />
+                            <p style="text-align: left">The  affairs dataset that comes with Statsmodels was derived from a survey of women in 1974 by Redbook magazine, in which married women were asked about their participation in extramarital affairs. More information about the study is available in a 1978 paper from the Journal of Political Economy. The dataset contains 6366 observations of 9 variables.<br><br>
+                                The features can be summarized as follows:
+                                <ol type="1" style="text-align: left">
+                                    <li><b>rate_marriage</b>: woman's rating of her marriage (1=very poor, 5=very good)</li>
+                                    <li><b>age</b>: woman's age</li>
+                                    <li><b>yrs_married</b>: number of years married</li>
+                                    <li><b>>children</b>: number of children</li>
+                                    <li><b>religious</b>: woman's rating of how religious she is (1=not religious, 4=strongly religious)</li>
+                                    <li><b>educ</b>: level of education (9=grade school, 12=high school, 14=some college, 16=college graduate, 17=some graduate school, 20=advanced degree)</li>
+                                    <li><b>occupation</b>: woman's occupation (1=student, 2=farming/semi-skilled/unskilled, 3=white collar, 4=teacher/nurse/writer/technician/skilled, 5=managerial/business, 6=professional with advanced degree)</li>
+                                    <li><b>occupation_husb</b>: husband's occupation (same coding as above)</li>
+                                    <li><b>affairs</b>: time spent in extra-marital affairs.</li>
+                                </ol>
+                            </p>
+                            <ul class="list-inline">
+                                <li>
+                                    <strong>ML Algorithm:</strong>
+                                    Logistic Regression
+                                </li>
+                                <li>
+                                    <strong>Category:</strong>
+                                    Binary classification(Supervised)
+                                </li>
+                            </ul>
+                            <a href="/logisticRegression" class="btn btn-primary btn-xl text-uppercase" role="button">
+                                View Project
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Project 3 modal popup-->
+<div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="close-modal" data-bs-dismiss="modal"><img src="{{ url_for('static', filename='images/img/close-icon.svg') }}" alt="Close modal" />
+            </div>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="modal-body">
+                            <!-- Project details-->
+                            <h2 class="text-uppercase">Titanic Survival Prediction</h2>
+                            <p class="item-intro text-muted">On April 15, 1912 early morning, the largest passenger liner(The RMS Titanic) ever made
+                                 collided with an iceberg and sank in the North Atlantic Ocean during her maiden voyage from Southampton to New York City.
+                            </p>
+                            <img class="img-fluid d-block mx-auto" src="{{ url_for('static', filename='images/portfolio/3.png') }}" alt="..." />
+                            <p style="text-align: left">
+                                These data were obtained from Robert Dawson, Saint Mary's University. It contains 891 observations of 12 variables.
+                                This data set provides information on the Titanic passengers and can be used to predict whether a passenger survived or not. 
+                                The goal is to predict whether a passenger survived or not based on the features provided.<br><br>
+                                The features can be summarized as follows:
+                                <ol type="1" style="text-align: left">
+                                    <li><b>PassengerId</b>: Passenger Id</li>
+                                    <li><b>Survived</b>: Survival (0 = No; 1 = Yes)</li>
+                                    <li><b>Pclass</b>: Passenger Class (1 = 1st; 2 = 2nd; 3 = 3rd)</li>
+                                    <li><b>Name</b>: Name</li>
+                                    <li><b>Sex</b>: Passenger's gender</li>
+                                    <li><b>Age</b>: Passenger's age</li>
+                                    <li><b>Sibsp</b>: Number of Siblings/Spouses Aboard</li>
+                                    <li><b>Parch</b>: Number of Parents/Children Aboard</li>
+                                    <li><b>Ticket</b>: Ticket Number</li>
+                                    <li><b>Fare</b>: Passenger Fare</li>
+                                    <li><b>Cabin</b>: Cabin</li>
+                                    <li><b>Embarked</b>: Port of Embarkation (C = Cherbourg; Q = Queenstown; S = Southampton)</li>
+                                </ol>
+                            </p>
+                            <ul class="list-inline">
+                                <li>
+                                    <strong>ML Algorithm:</strong>
+                                    Decision Tree
+                                </li>
+                                <li>
+                                    <strong>Category:</strong>
+                                    Binary Classification(Supervised)
+                                </li>
+                            </ul>
+                            <a href="/decisionTree" class="btn btn-primary btn-xl text-uppercase" role="button">
+                                View Project
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Project 4 modal popup-->
+<div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="close-modal" data-bs-dismiss="modal"><img src="{{ url_for('static', filename='images/img/close-icon.svg') }}" alt="Close modal" />
+            </div>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="modal-body">
+                            <!-- Project details-->
+                            <h2 class="text-uppercase">Boston House Price Prediction</h2>
+                            <p class="item-intro text-muted">Boston Housing Data was taken from the StatLib library and is maintained by Carnegie Mellon University.</p>
+                            <img class="img-fluid d-block mx-auto" src="{{ url_for('static', filename='images/portfolio/1.png') }}" alt="..." />
+                            <p style="text-align: left">The dataset used in this project comes from the UCI Machine Learning Repository. This data was collected in 1978 and each of the 506 entries represents aggregate information about 14 features of homes from various suburbs located in Boston.<br><br>
+
+                                The features can be summarized as follows:<br>
+                                <ol type="1" style="text-align: left">
+                                    <li><b>CRIM</b>: This is the per capita crime rate by town.</li>
+                                    <li><b>ZN</b>: This is the proportion of residential land zoned for lots larger than 25,000 sq.ft.</li>
+                                    <li><b>INDUS</b>: This is the proportion of non-retail business acres per town.</li>
+                                    <li><b>CHAS</b>: This is the Charles River dummy variable (this is equal to 1 if tract bounds river; 0 otherwise).</li>
+                                    <li><b>NOX</b>: This is the nitric oxides concentration (parts per 10 million).</li>
+                                    <li><b>RM</b>: This is the average number of rooms per dwelling.</li>
+                                    <li><b>AGE</b>: This is the proportion of owner-occupied units built prior to 1940.</li>
+                                    <li><b>DIS</b>: This is the weighted distances to five Boston employment centers.</li>
+                                    <li><b>RAD</b>: This is the index of accessibility to radial highways.</li>
+                                    <li><b>TAX</b>: This is the full-value property-tax rate per $10,000.</li>
+                                    <li><b>PTRATIO</b>: This is the pupil-teacher ratio by town.</li>
+                                    <li><b>B</b>: This is calculated as 1000(Bk — 0.63)², where Bk is the proportion of people of African American descent by town.</li>
+                                    <li><b>LSTAT</b>: This is the percentage lower status of the population.</li>
+                                    <li><b>MEDV</b>: This is the median value of owner-occupied homes in $1000s.</li>
+                                </ol>
+                            </p>
+                            <ul class="list-inline">
+                                <li>
+                                    <strong>ML Algorithm:</strong>
+                                    Random Forest
+                                </li>
+                                <li>
+                                    <strong>Category:</strong>
+                                    Regression(Supervised)
+                                </li>
+                            </ul>
+                            <a href="/randomForest" class="btn btn-primary btn-xl text-uppercase" role="button">
+                                View Project
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Project 5 modal popup-->
+<div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="close-modal" data-bs-dismiss="modal"><img src="{{ url_for('static', filename='images/img/close-icon.svg') }}" alt="Close modal" />
+            </div>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="modal-body">
+                            <!-- Project details-->
+                            <h2 class="text-uppercase">Adult Income Prediction</h2>
+                            <p class="item-intro text-muted">The Adult dataset is from the Census Bureau and the task is to predict whether a given adult makes more than $50,000 a year based attributes such as education, hours of work per week, etc.</p>
+                            <img class="img-fluid d-block mx-auto" src="{{ url_for('static', filename='images/portfolio/5.png') }}" alt="..." />
+                            <p style="text-align: left">Extraction was done by Barry Becker from the 1994 Census database. A set of reasonably clean records was extracted using the following conditions: ((AAGE>16) && (AGI>100) && (AFNLWGT>1)&& (HRSWK>0)).
+                                Prediction task is to determine whether a person makes over 50K a year. The dataset contains 48842 instances and 14 attributes.<br><br>
+                                The data set contains the following features:
+                                <ol type="1" style="text-align: left">
+                                    <li><b>Listing of attributes</b>: >50K, <=50K.</li>
+                                    <li><b>age</b>: continuous.</li>
+                                    <li><b>workclass</b>: Private, Self-emp-not-inc, Self-emp-inc, Federal-gov, Local-gov, State-gov, Without-pay, Never-worked.</li>
+                                    <li><b>fnlwgt</b>: continuous.</li>
+                                    <li><b>education</b>: Bachelors, Some-college, 11th, HS-grad, Prof-school, Assoc-acdm, Assoc-voc, 9th, 7th-8th, 12th, Masters, 1st-4th, 10th, Doctorate, 5th-6th, Preschool.</li>
+                                    <li><b>education-num</b>: continuous.</li>
+                                    <li><b>marital-status</b>: Married-civ-spouse, Divorced, Never-married, Separated, Widowed, Married-spouse-absent, Married-AF-spouse.</li>
+                                    <li><b>occupation</b>: Tech-support, Craft-repair, Other-service, Sales, Exec-managerial, Prof-specialty, Handlers-cleaners, Machine-op-inspct, Adm-clerical, Farming-fishing, Transport-moving, Priv-house-serv, Protective-serv, Armed-Forces.</li>
+                                    <li><b>relationship</b>: Wife, Own-child, Husband, Not-in-family, Other-relative, Unmarried.</li>
+                                    <li><b>race</b>: White, Asian-Pac-Islander, Amer-Indian-Eskimo, Other, Black.</li>
+                                    <li><b>sex</b>: Female, Male.</li>
+                                    <li><b>capital-gain</b>: continuous.</li>
+                                    <li><b>capital-loss</b>: continuous.</li>
+                                    <li><b>hours-per-week</b>: continuous.</li>
+                                    <li><b>native-country</b>: United-States, Cambodia, England, Puerto-Rico, Canada, Germany, Outlying-US(Guam-USVI-etc), India, Japan, Greece, South, China, Cuba, Iran, Honduras, Philippines, Italy, Poland, Jamaica, Vietnam, Mexico, Portugal, Ireland, France, Dominican-Republic, Laos, Ecuador, Taiwan, Haiti, Columbia, Hungary, Guatemala, Nicaragua, Scotland, Thailand, Yugoslavia, El-Salvador, Trinadad&Tobago, Peru, Hong, Holand-Netherlands.</li>
+                                </ol>
+                            </p>
+                            <ul class="list-inline">
+                                <li>
+                                    <strong>ML Algorithm:</strong>
+                                    Extreme Gradient Boost (XG Boost)
+                                </li>
+                                <li>
+                                    <strong>Category:</strong>
+                                    Binary Classification(Supervised)
+                                </li>
+                            </ul>
+                            <a href="/xgBoost" class="btn btn-primary btn-xl text-uppercase" role="button">
+                                View Project
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Project 6 modal popup-->
+<div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="close-modal" data-bs-dismiss="modal"><img src="{{ url_for('static', filename='images/img/close-icon.svg') }}" alt="Close modal" />
+            </div>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="modal-body">
+                            <!-- Project details-->
+                            <h2 class="text-uppercase">Project Name</h2>
+                            <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                            <img class="img-fluid d-block mx-auto" src="{{ url_for('static', filename='images/portfolio/6.png') }}" alt="..." />
+                            <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur
+                                adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt
+                                repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae,
+                                nostrum, reiciendis facere nemo!</p>
+                            <ul class="list-inline">
+                                <li>
+                                    <strong>Client:</strong>
+                                    Window
+                                </li>
+                                <li>
+                                    <strong>Category:</strong>
+                                    Photography
+                                </li>
+                            </ul>
+                            <a href="boston.html" class="btn btn-primary btn-xl text-uppercase" role="button">
+                                View Project
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Project 1 modal popup-->
+<div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" />
+            </div>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="modal-body">
+                            <!-- Project details-->
+                            <h2 class="text-uppercase">Project Name</h2>
+                            <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                            <img class="img-fluid d-block mx-auto" src="{{ url_for('static', filename='images/portfolio/6.jpg') }}" alt="..." />
+                            <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur
+                                adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt
+                                repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae,
+                                nostrum, reiciendis facere nemo!</p>
+                            <ul class="list-inline">
+                                <li>
+                                    <strong>Client:</strong>
+                                    Threads
+                                </li>
+                                <li>
+                                    <strong>Category:</strong>
+                                    Illustration
+                                </li>
+                            </ul>
+                            <a href="boston.html" class="btn btn-primary btn-xl text-uppercase" role="button">
+                                View Project
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Project 2 modal popup-->
+<div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" />
+            </div>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="modal-body">
+                            <!-- Project details-->
+                            <h2 class="text-uppercase">Project Name</h2>
+                            <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                            <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/2.png" alt="..." />
+                            <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur
+                                adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt
+                                repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae,
+                                nostrum, reiciendis facere nemo!</p>
+                            <ul class="list-inline">
+                                <li>
+                                    <strong>Client:</strong>
+                                    Explore
+                                </li>
+                                <li>
+                                    <strong>Category:</strong>
+                                    Graphic Design
+                                </li>
+                            </ul>
+                            <a href="boston.html" class="btn btn-primary btn-xl text-uppercase" role="button">
+                                View Project
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Project 3 modal popup-->
+<div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" />
+            </div>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="modal-body">
+                            <!-- Project details-->
+                            <h2 class="text-uppercase">Project Name</h2>
+                            <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                            <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/3.png" alt="..." />
+                            <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur
+                                adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt
+                                repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae,
+                                nostrum, reiciendis facere nemo!</p>
+                            <ul class="list-inline">
+                                <li>
+                                    <strong>Client:</strong>
+                                    Finish
+                                </li>
+                                <li>
+                                    <strong>Category:</strong>
+                                    Identity
+                                </li>
+                            </ul>
+                            <a href="boston.html" class="btn btn-primary btn-xl text-uppercase" role="button">
+                                View Project
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Project 4 modal popup-->
+<div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" />
+            </div>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="modal-body">
+                            <!-- Project details-->
+                            <h2 class="text-uppercase">Project Name</h2>
+                            <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                            <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/1.png" alt="..." />
+                            <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur
+                                adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt
+                                repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae,
+                                nostrum, reiciendis facere nemo!</p>
+                            <ul class="list-inline">
+                                <li>
+                                    <strong>Client:</strong>
+                                    Lines
+                                </li>
+                                <li>
+                                    <strong>Category:</strong>
+                                    Branding
+                                </li>
+                            </ul>
+                            <a href="boston.html" class="btn btn-primary btn-xl text-uppercase" role="button">
+                                View Project
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Project 5 modal popup-->
+<div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" />
+            </div>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="modal-body">
+                            <!-- Project details-->
+                            <h2 class="text-uppercase">Project Name</h2>
+                            <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                            <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/5.png" alt="..." />
+                            <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur
+                                adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt
+                                repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae,
+                                nostrum, reiciendis facere nemo!</p>
+                            <ul class="list-inline">
+                                <li>
+                                    <strong>Client:</strong>
+                                    Southwest
+                                </li>
+                                <li>
+                                    <strong>Category:</strong>
+                                    Website Design
+                                </li>
+                            </ul>
+                            <a href="boston.html" class="btn btn-primary btn-xl text-uppercase" role="button">
+                                View Project
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Project 6 modal popup-->
+<div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" />
+            </div>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="modal-body">
+                            <!-- Project details-->
+                            <h2 class="text-uppercase">Project Name</h2>
+                            <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                            <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/6.png" alt="..." />
+                            <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur
+                                adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt
+                                repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae,
+                                nostrum, reiciendis facere nemo!</p>
+                            <ul class="list-inline">
+                                <li>
+                                    <strong>Client:</strong>
+                                    Window
+                                </li>
+                                <li>
+                                    <strong>Category:</strong>
+                                    Photography
+                                </li>
+                            </ul>
+                            <a href="boston.html" class="btn btn-primary btn-xl text-uppercase" role="button">
+                                View Project
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,100 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+<title>Titanic</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+{% endblock %}
+
+{% block body %}
+<header class="content bg-dark text-primary"></header>
+<div class="form">
+    <form action="javascript:void(0)" id="fdata" method="post">
+        <center>
+            <table>
+                <tr>
+                    <h1 style="text-align: center" class="content text-primary">Predict Titanic Passenger's Survival</h1>
+                </tr>
+                <tr>
+                <td><input type="number" name="PassengerId" id="PassengerId" placeholder="Passenger ID"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <input placeholder="Passenger Class:" disabled="disabled" class="content bg-light">
+                        <select name="Pclass" id="	Pclass">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="text" name="Name" id="Name" placeholder="Name">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input placeholder="Sex" disabled="disabled" class="content bg-light">
+                        <select name="Sex" id="Sex">
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="number" name="Age" id="Age" placeholder="Age" step="any">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="number" name="SibSp" id="SibSp" placeholder="Siblings/Spouse">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="number" name="Parch" id="Parch" placeholder="Parents/Children">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="text" name="Ticket" id="Ticket" placeholder="Ticket Number">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="number" name="Fare" id="Fare" placeholder="Fare" step="any">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input name="Cabin" id="Cabin" placeholder="Cabin" >
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input placeholder="Port of Embarktion:" disabled="disabled" class="content bg-light">
+                        <select name="Embarked" id="Embarked">
+                            <option value="S">Southampton, U.K.</option>
+                            <option value="C">Cherbourg, France</option>
+                            <option value="Q">Queesntown, Ireland</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr><td></td></tr>
+                <tr>
+                    <td></td>
+                    <td align="center">
+                        <input type="submit" value="Predict" class="button" style="background-color: green; "onclick="requiredCheck()">
+                        <input type="submit" value="Clear" class="button" style="background-color: red; "onclick="clear()">
+                    </td>
+                </tr>
+            </table>
+        </center>
+    </form>
+</div>
+<script src="{{ url_for('static', filename='js/titanic.js') }}"></script>
+{% endblock %}
+<!-- "javascript:void(0)" -->
+<!-- onclick="requiredCheck()" -->
